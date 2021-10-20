@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+:root {
+    --p-color : #848585;
+    --card-border : #e3e3e3;
+    --hero-background : #f9f6f1;
+}
+
+body {
+    margin: 0;
+    font-family: 'Archivo' , sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--p-color);
+}
+
+p {
+    color: var(--p-color);
+}
+
+h1 , h2 {
+    margin-bottom: 0;
+}
+
+.container {
+    margin: 0 10%;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid var(--card-border);
+    padding: 30px;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.nav__nav-links {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav__userdisplay {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav__menu {
+    display: none;
+}
+
+
+
+.hero {
+    background-color: var(--hero-background);
+    padding: 30px 0;
+    margin-bottom: 60px;
+}
+
+.hero__container {
+    min-height: 250px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__search {
+    display: flex;
+    align-items: stretch;
+    margin: 5px 0 20px;
+    gap: 20px;
+}
+
+.hero__search_input {
+    font-family: 'Archivo' , sans-serif , 'Font Awesome 5 Pro';
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--card-border) ;
+    width: 50%;
+    text-align: center;
+}
+
+.hero__addcamp {
+    text-decoration: underline;
+}
+
+
+.main__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.main__container > * {
+    flex: 1 1 250px;
+}
+
+.main__card_image {
+    width: 100%;
+}
+
+.main__button {
+    border: 1px solid var(--card-border);
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100px;
+    align-items: center;
+}
+
+
+@media (max-width: 768px) {
+
+    .nav__mobile {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__menu {
+        display: block;
+    }
+
+    .nav__container {
+        flex-direction: column;
+    }
+
+    .nav__nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav__userdisplay {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hero__search {
+        flex-direction: column;
+    }
+
+    .hero__search_input {
+        width: 91%;
+        text-align: start;
+        padding: 15px;
+    }
+}

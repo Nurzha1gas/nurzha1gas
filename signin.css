@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+:root {
+    --p-color : #848585;
+    --background-color : #f9f6f1;
+    --a-color : #68d6f4;
+}
+
+body {
+    margin: 0;
+    font-family: 'Archivo' , sans-serif;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--p-color);
+}
+
+.container {
+    margin: auto 10%;
+}
+
+header {
+    background: linear-gradient( 90deg ,  white 60%, var(--background-color) 40%);
+}
+
+.nav__container {
+    width: 40%;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero__container {
+    display: flex;
+    gap: 50px;
+}
+
+.hero__left-column {
+    justify-content: center;
+    min-width: 40%;
+}

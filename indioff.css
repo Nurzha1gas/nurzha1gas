@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+
+:root {
+    --p-color : #848585;
+    --card-border : #e3e3e3;
+}
+
+body {
+    margin: 0;
+    font-family: 'Archivo' , sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--p-color);
+}
+
+p {
+    color: var(--p-color);
+}
+
+h2 , h3 {
+    margin-bottom: 0;
+}
+
+.container {
+    margin: 0 10%;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid var(--card-border);
+    padding: 30px;
+    max-width: 100%;
+}
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.nav__nav-links {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav__userdisplay {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav__menu {
+    display: none;
+}
+
+
+.main__container {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content max-content;
+    grid-template-areas: 
+    'map camp'
+    '. review';
+    gap: 30px;
+}
+
+.main__map {
+    grid-area: map;
+}
+
+.main__map_image{
+    width: 100%;
+}
+
+.main__camp {
+    grid-area: 'camp';
+}
+
+.main__camp_image {
+    width: 100%;
+}
+
+
+.main__camp-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__reviews {
+    grid-area: review;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__review {
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 15px;
+}
+
+.main__review-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main__button {
+    margin: 40px 0;
+    text-align: right;
+}
+
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100px;
+    align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+
+    .main__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3 , max-content) ;
+        grid-template-areas: 
+        'camp'
+        'review'
+        'map';
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    .nav__mobile {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav__menu {
+        display: block;
+    }
+
+    .nav__container {
+        flex-direction: column;
+    }
+
+    .nav__nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav__userdisplay {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
